@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mfd/video.css">
+</head>
+  
+<body>
+    <h1>SeekaaTv</h1>
+  <h2>Ma Famille D'abord Saison 1 Épisode 1 : Un papa en or</h2>
+    <video width="890" height="500" controls >
+        <source src="../mfd/s1/s1e1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+  
+    <p>
+        <button onclick="increase()">Increase Speed</button>
+        <button onclick="decrease()">Decrease Speed</button>
+    </p>
+  <p>
+      <a href="">Null</a>
+      <a href="../mfd/s1e2.html"> Saison 1 Episode 2</a>
+        
+    </p>
+    <script>
+        let video = document.querySelector('video');
+  
+        // Set the default playing speed
+        video.defaultPlaybackRate = 1;
+       
+        // Loading the video after setting 
+        video.load();
+  
+        function increase() {
+  
+            // Increasing the playing speed by 1
+            video.playbackRate += 1;
+        }
+  
+        function decrease() {
+  
+            // Decreasing the playing speed by 1
+            if (video.playbackRate > 1)
+                video.playbackRate -= 1;
+        }
+    </script>
+</body>
+  
+</html>
